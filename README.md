@@ -107,7 +107,7 @@ To add a new classifier:
   - Azure Container Apps
 
 
-## Web App Example
+## Web App
 
 ![Streamlit-Docker-WebApp](https://github.com/user-attachments/assets/ec5edfdd-0eac-4eb4-9688-3bc8f16f79f7)
 

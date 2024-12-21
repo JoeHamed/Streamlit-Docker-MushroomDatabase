@@ -76,3 +76,32 @@ The app will be accessible at `http://localhost:9000`.
   - Adjust hyperparameters for the selected model.
   - Choose performance metrics to visualize.
 - Upload a new dataset or use the default dataset for predictions.
+
+## Running Locally (Optional)
+If you prefer running the application locally without Docker:
+
+### 1. Install Dependencies
+```bash
+pip install -r app/requirements.txt
+```
+### 2. Run the Application
+```bash
+streamlit run app/app.py
+```
+The app will be accessible at `http://localhost:8501` by default.
+
+## Customization
+### Updating the Dataset
+Replace the `mushrooms.csv` file in the `data/` directory with your dataset. Ensure that the target variable is named `class` and that categorical features are encoded numerically.
+
+### Adding New Models
+To add a new classifier:
+1. Update the `main()` function in `app.py` with the new model.
+2. Add necessary hyperparameter inputs in the sidebar.
+
+## Deployment
+### Cloud Deployment
+- The Docker container can be deployed to cloud services like:
+  - AWS ECS
+  - Google Cloud Run
+  - Azure Container Apps

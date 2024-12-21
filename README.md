@@ -105,3 +105,10 @@ To add a new classifier:
   - AWS ECS
   - Google Cloud Run
   - Azure Container Apps
+
+
+## Web App Example
+
+![Streamlit-Docker-WebApp](https://github.com/user-attachments/assets/ec5edfdd-0eac-4eb4-9688-3bc8f16f79f7)
+
+

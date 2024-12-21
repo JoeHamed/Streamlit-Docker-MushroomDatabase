@@ -21,4 +21,58 @@ This project is a **binary classification web application** built with **Streaml
 ---
 
 ## Project Structure
+```bash
+. ├── app/
+│ ├── app.py # Streamlit app code
+│ ├── requirements.txt # Python dependencies
+├── data/ │ └── mushrooms.csv # Mushrooms dataset
+├── Dockerfile # Docker configuration
+└── README.md # Project documentation
+```
 
+---
+
+## Dataset
+
+The app uses the **Mushrooms Dataset** from the UCI Machine Learning Repository. Each feature in the dataset has been encoded numerically for compatibility with the classifiers. The target variable is `class`, with two possible values:
+- **Edible** (0)
+- **Poisonous** (1)
+
+---
+
+## Requirements
+
+- **Docker**: Ensure Docker is installed on your system.
+- **Python 3.11** (optional, if running locally without Docker).
+- Python dependencies (listed in `requirements.txt`).
+
+---
+
+## Setup Instructions
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-repo/mushroom-classification-streamlit.git
+cd mushroom-classification-streamlit
+```
+
+### 2. Build and Run the Docker Container
+Build the Docker Image
+```bash
+docker build -t mushroom-classifier .
+```
+Run the Docker Container
+```bash
+docker run -d -p 9000:9000 mushroom-classifier
+```
+The app will be accessible at `http://localhost:9000`.
+
+## Usage
+### Web Application
+- Open your browser and navigate to: http://localhost:9000
+- Use the sidebar to:
+  - Select the classifier (SVM, Logistic Regression, Random Forest).
+  - Adjust hyperparameters for the selected model.
+  - Choose performance metrics to visualize.
+- Upload a new dataset or use the default dataset for predictions.
